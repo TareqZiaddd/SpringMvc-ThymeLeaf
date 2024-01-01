@@ -67,15 +67,11 @@ public String saveEmployee(Model model) {
 ----------------------------------------------------------------------------------------------------------------
  HTML
 -------------------------------------------------------------------------------------------------------------------
-
-        <form action="#" th:action="@{/saveEmp}" th:object="${user}" method="POST">
-    <textarea id="messageInput" class="rounded border border-primary p-5 m-5" style="color: black; background: white; height: 200px; width: 400px; writing-mode: vertical-rl; text-align: right;" maxlength="250"
-              th:name="message"
-              oninput="limitTextarea(this, 250)"
+  <form th:action="@{/saveEmp}" th:object="${user}" method="POST">
+    <textarea
+              th:name="message"  الاشي الوحيد من الاتربيوتس اللي بدك تسيفو
     ></textarea>
-          <span id="charCount" >250</span> characters remaining
-          <br>
-          <button type="submit" class="btn btn-primary" style="margin-bottom: 70px; font-size: 25px;">إرسال</button>
+          <button type="submit">إرسال</button>
         </form>
 
     
