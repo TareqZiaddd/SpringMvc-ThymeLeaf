@@ -83,15 +83,39 @@ paraghraph اما داخل
     d ولا فيه اي فرق بالمرة
     lبس لازم تنتبه انو في كونترولر بدو يوصلنا لهون عشان نقدرنعمل هاض الحكي
 
-  @GetMapping("/db")
-   public String DataBaseTable (Model model){
-       model.addAttribute("user",userService.getAllUsers());
-       return  "DataBaseTable";
-   }
-   وبس
+
 
 @GetMapping("/")
  public String indexPage (){
      return  "index";
  }
     
+
+   ---------------------------------------------------------------------------------------------------------------------
+      @GetMapping("/db")
+   public String DataBaseTable (Model model){
+       model.addAttribute("user",userService.getAllUsers());
+       return  "DataBaseTable";
+   }
+       
+       
+       
+       <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#id</th>
+            <th scope="col" maxlength="255">Message</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${user}">
+            <th scope="row" th:text="${user.id}">1</th>
+            <td th:text="${user.message}">Mark</td>
+        </tr>
+
+        </tbody>
+      </table>
+      
+   وبس
+
+
