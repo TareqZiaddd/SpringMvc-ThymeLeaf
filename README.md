@@ -90,4 +90,8 @@ paraghraph اما داخل
    }
    وبس
 
+@GetMapping("/")
+ public String indexPage (){
+     return  "index";
+ }
     
