@@ -83,6 +83,11 @@ paraghraph اما داخل
     d ولا فيه اي فرق بالمرة
     lبس لازم تنتبه انو في كونترولر بدو يوصلنا لهون عشان نقدرنعمل هاض الحكي
 
-
+  @GetMapping("/db")
+   public String DataBaseTable (Model model){
+       model.addAttribute("user",userService.getAllUsers());
+       return  "DataBaseTable";
+   }
+   وبس
 
     
