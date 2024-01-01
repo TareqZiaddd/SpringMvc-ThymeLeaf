@@ -74,4 +74,15 @@ public String saveEmployee(Model model) {
           <button type="submit">إرسال</button>
         </form>
 
+    -----------------------------------------------------------------------------
+    عرض ال html في صفحة اخرى بعد عملية ال save مرة داخل textArea ومرة داخل ال paraghraph
+----------------------------------------------------------------------------------------------
+ <textarea th:each="user : ${user}" th:text="${user.message}"></textarea>
+paraghraph اما داخل
+    <p th:each="user : ${user}" th:text="${user.message}"></p>
+    d ولا فيه اي فرق بالمرة
+    lبس لازم تنتبه انو في كونترولر بدو يوصلنا لهون عشان نقدرنعمل هاض الحكي
+
+
+
     
